@@ -6,7 +6,7 @@
         {
             Player player = new Player();
             Renderer draw = new Renderer();
-            draw.DrawPlayerIcon(player);
+            draw.DrawPlayer(player);
         }
     }
 
@@ -39,7 +39,7 @@
 
     class Renderer
     {
-        public void DrawPlayerIcon(Player player)
+        public void DrawPlayer(Player player)
         {
             Console.SetCursorPosition(player.PlayerPositionX, player.PlayerPositionY);
             Console.Write(player.PlayerChar);
