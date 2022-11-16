@@ -5,35 +5,36 @@
         static void Main()
         {
             Player player = new Player();
-            Renderer draw = new Renderer();
-            draw.DrawPlayer(player);
+            Renderer render = new Renderer();
+            render.DrawPlayer(player);
         }
     }
 
     class Player
     {
-        public char PlayerChar { get; private set; }
         private int _health;
         private int _damage;
-        public int PlayerPositionX { get; private set; }
-        public int PlayerPositionY { get; private set; }
+
+        public char Symbol { get; private set; }
+        public int PositionX { get; private set; }
+        public int PositionY { get; private set; }
 
         public Player(char playerChar, int health, int damage, int playerPositionX, int playerPositionY)
         {
-            PlayerChar = playerChar;
+            Symbol = playerChar;
             _health = health;
             _damage = damage;
-            PlayerPositionX = playerPositionX;
-            PlayerPositionY = playerPositionY;
+            PositionX = playerPositionX;
+            PositionY = playerPositionY;
         }
 
         public Player()
         {
-            PlayerChar = (char)02;
+            Symbol = (char)02;
             _health = 100;
             _damage = 20;
-            PlayerPositionX = 5;
-            PlayerPositionY = 5;
+            PositionX = 5;
+            PositionY = 5;
         }
     }
 
@@ -41,8 +42,8 @@
     {
         public void DrawPlayer(Player player)
         {
-            Console.SetCursorPosition(player.PlayerPositionX, player.PlayerPositionY);
-            Console.Write(player.PlayerChar);
+            Console.SetCursorPosition(player.PositionX, player.PositionY);
+            Console.Write(player.Symbol);
         }
     }
 }
