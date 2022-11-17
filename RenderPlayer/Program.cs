@@ -19,13 +19,13 @@
         public int PositionX { get; private set; }
         public int PositionY { get; private set; }
 
-        public Player(char playerChar, int health, int damage, int playerPositionX, int playerPositionY)
+        public Player(char playerChar, int health, int damage, int positionX, int positionY)
         {
             Symbol = playerChar;
             _health = health;
             _damage = damage;
-            PositionX = playerPositionX;
-            PositionY = playerPositionY;
+            PositionX = positionX;
+            PositionY = positionY;
         }
 
         public Player()
